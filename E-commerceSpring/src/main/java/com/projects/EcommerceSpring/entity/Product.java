@@ -67,4 +67,7 @@ public class Product {
     @UpdateTimestamp
     private Date lastUpdate;
 
+    public Product() {
+    }
+
 }
