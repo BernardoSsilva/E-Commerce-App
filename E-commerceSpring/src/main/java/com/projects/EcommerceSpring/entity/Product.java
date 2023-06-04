@@ -1,29 +1,22 @@
 package com.projects.EcommerceSpring.entity;
 
-import java.util.Date;
-
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.Data;
+import jakarta.persistence.*;
+import java.math.BigDecimal;
+import java.util.Date;
 
 // gerar getters e setters automaticamente
-@Data
 // indica que é uma tabela de nome produto
-@Table(name = "product")
 // indica ser uma entidade de banco de dados
 @Entity
+@Table(name="product")
+@Data
 public class Product {
 
-    // configura a variavel id como coluna que tem o valor de identidade gerado e
+     // configura a variavel id como coluna que tem o valor de identidade gerado e
     // que a coluna se chama id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +37,7 @@ public class Product {
     private String description;
 
     @Column(name = "unit_price")
-    private Double unitPrice;
+    private BigDecimal unitPrice;
 
     @Column(name = "image_url")
     private String imageUrl;
@@ -52,22 +45,18 @@ public class Product {
     @Column(name = "active")
     private boolean active;
 
-    @Column(name = "units_in_strock")
-    private Integer unitsInStock;
+    @Column(name = "units_in_stock")
+    private int unitsInStock;
 
-    @Column(name = "date_created")
     // anotação que faz o gerenciamento da marca temporal da criação do dado de
     // forma automatica
+    @Column(name = "date_created")
     @CreationTimestamp
     private Date dateCreated;
 
-    @Column(name = "last_updated")
     // anotação que faz o gerenciamento da marca temporal da atualização do dado de
     // forma automatica
+    @Column(name = "last_updated")
     @UpdateTimestamp
-    private Date lastUpdate;
-
-    public Product() {
-    }
-
+    private Date lastUpdated;
 }
