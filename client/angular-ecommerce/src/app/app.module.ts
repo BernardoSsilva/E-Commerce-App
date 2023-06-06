@@ -7,16 +7,19 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
+import { CurrencyPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    HttpClientModule
+    ProductListComponent
+    //HttpClientModule
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CurrencyPipe,
+    AppRoutingModule,
+    HttpClientModule
   ],
   // ao colocar ProductService ou outros serviços em providers permitimos a injeção da dependencia em outras classes
   providers: [ProductService],

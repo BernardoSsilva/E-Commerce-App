@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../common/product';
 import { Observable } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 @Injectable({
