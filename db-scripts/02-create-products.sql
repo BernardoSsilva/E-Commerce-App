@@ -43,34 +43,34 @@ AUTO_INCREMENT = 1;
 -- Add sample data
 -- -----------------------------------------------------
 
-INSERT INTO product_category(category_name) VALUES ('BOOKS');
+INSERT INTO product_category(category_name) VALUES ('LIVROS');
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1000', 'JavaScript - The Fun Parts', 'Learn JavaScript',
-'assets/images/products/placeholder.png'
-,1,100,19.99,1, NOW());
+VALUES ('FICCAO-100', 'Box - O senhor dos anéis', 'Box com 3 livros da serie "O senhor dos aneis"',
+'https://img.assinaja.com/assets/tZ/099/img/424197_520x520.jpg'
+,1,40,135.90,1, NOW());
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1001', 'Spring Framework Tutorial', 'Learn Spring',
-'assets/images/products/placeholder.png'
+VALUES ('TECNOLOGIA-1000',	'Produtividade no desenvolvimento SpringBoot',	'Aprenda SpringBoot'
+'https://s3.amazonaws.com/algaworks-cafe.algaworks.com/wp-content/uploads/2018/08/fn013_ebook_pagina2.jpg'
 ,1,100,29.99,1, NOW());
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1002', 'Kubernetes - Deploying Containers', 'Learn Kubernetes',
-'assets/images/products/placeholder.png'
-,1,100,24.99,1, NOW());
+VALUES ('HISTORIA-1001'	,'Homero - Box com 2 livros'	,'Box com os livros Odisséia e Iliada'
+'https://m.media-amazon.com/images/I/51w-S+HjEjS._SX394_BO1,204,203,200_.jpg'
+,1,70,35.40,1, NOW());
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1003', 'Internet of Things (IoT) - Getting Started', 'Learn IoT',
-'assets/images/products/placeholder.png'
-,1,100,29.99,1, NOW());
+VALUES ('TECNOLOGIA-1001'	,'Java para leigos'	 ,'informações atualizadas sobre linguagens de programação, o básico da programação orientada a objetos, direcionamentos de como criar aplicativos utilizando o JDK7',
+'https://m.media-amazon.com/images/I/51ZAEw1+13L._SY344_BO1,204,203,200_.jpg'
+,1,89,75.80,1, NOW());
 
 INSERT INTO product (sku, name, description, image_url, active, units_in_stock,
 unit_price, category_id, date_created)
-VALUES ('BOOK-TECH-1004', 'The Go Programming Language: A to Z', 'Learn Go',
-'assets/images/products/placeholder.png'
-,1,100,24.99,1, NOW());
+VALUES ('INFANTIL-1004', 'Macaco Mal humorado', 'Macaco Mal humorado',
+'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTzDYInd1feOO_SUXpWEc1yEDkIHBRDb_8gDnk20FQS93EgqnT-zQfRZ45rbcMO87Itf4ejSe0X-sQn_Fhg7tg1eUDkO2cQBwQLuvdctOjH&usqp=CAE'
+,1,120,12.90,1, NOW());
