@@ -16,8 +16,12 @@ export class ProductService {
 
   // metodo para puxar a lista de produtos
   // esse metodo vai mapear o Json e retornar uma matriz observavel
-  getProductList(): Observable<Product[]>{
-    return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
+  getProductList(theCategoryId: number): Observable<Product[]>{
+
+    // url para a pesquisa por meio da categoria
+    const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`
+
+    return this.httpClient.get<GetResponse>(searchUrl).pipe(
       map(response => response._embedded.products)
     );
     
