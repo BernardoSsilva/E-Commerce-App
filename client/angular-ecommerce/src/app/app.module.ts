@@ -9,6 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
 import { CurrencyPipe } from '@angular/common';
 
+import { Routes, RouterModule } from '@angular/router'
+
+const routes : Routes = [
+  {path: 'category/:id', component: ProductListComponent}
+  {path: 'category', component: ProductListComponent}
+  {path: 'products', component: ProductListComponent}
+  {path: '', redirectTo: '/products', pathMatch: 'full'}
+  {path: '**', redirectTo: '/products', pathMatch: 'full'}
+];
 @NgModule({
   declarations: [
     AppComponent,
