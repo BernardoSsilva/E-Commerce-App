@@ -11,7 +11,8 @@ import { CurrencyPipe } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
-import { SearchComponent } from './components/search/search.component'
+import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component'
 
 const routes : Routes = [
   {path: 'search/:keyword', component:ProductListComponent},
@@ -19,14 +20,16 @@ const routes : Routes = [
   {path: 'category', component: ProductListComponent},
   {path: 'products', component: ProductListComponent},
   {path: '', redirectTo: '/products', pathMatch: 'full'},
-  {path: '**', redirectTo: '/products', pathMatch: 'full'}
+  {path: '**', redirectTo: '/products', pathMatch: 'full'},
+  {path: 'products/:id', component:ProductDetailsComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductCategoryMenuComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDetailsComponent
     //HttpClientModule
   ],
   imports: [

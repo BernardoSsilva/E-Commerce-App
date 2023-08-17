@@ -6,10 +6,15 @@
                 <!-- repetição para mostrar a coleção de produtos-->
                 <div *ngFor="let tempProduct of products" class="col-md-3">
                     <div class="product-box">
-                        <img src="{{ tempProduct.imageUrl }}" class="img-responsive" height="30">
+                        <a routerLink="/products/{{ tempProduct.id }}">
+                            <img src="{{ tempProduct.imageUrl }}" class="img-responsive" height="30">
+                        </a>
+
+                        <a routerLink="/products/{{ tempProduct.id }}">
                         <h1>
                             {{ tempProduct.name }}
                         </h1>
+                        </a>
                         <div class="price">
                             {{ tempProduct.unitPrice | currency: 'BRL'}}
                             <a href="#" class="primary-btn"> adicionar ao carrinho</a>
