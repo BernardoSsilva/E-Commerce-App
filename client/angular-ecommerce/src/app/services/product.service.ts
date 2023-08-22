@@ -17,6 +17,11 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getProduct(theProductId: number):Observable<Product>{
+    const productUrl = `${this.baseUrl}/${theProductId}`;
+
+    return this.httpClient.get<Product>(productUrl);
+  }
   // metodo para puxar a lista de produtos
   // esse metodo vai mapear o Json e retornar uma matriz observavel
   getProductList(theCategoryId: number): Observable<Product[]>{
