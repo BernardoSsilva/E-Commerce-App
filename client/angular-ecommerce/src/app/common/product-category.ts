@@ -1,9 +1,7 @@
 export class ProductCategory {
 
-    constructor(public id: number,
+    constructor(public id: string,
                 public categoryName: string){
-                        
-
                 }
 
 }
