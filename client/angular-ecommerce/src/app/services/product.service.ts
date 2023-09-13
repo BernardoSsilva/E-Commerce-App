@@ -12,8 +12,8 @@ import { ProductCategory } from '../common/product-category';
 export class ProductService {
   
 
-  private baseUrl = "http://localhost:8080/api/products?size=30"
-  private categoryUrl= "http://localhost:8080/api/product-category"
+  private baseUrl = "http://localhost:8080/api/products?size=30";
+  private categoryUrl= "http://localhost:8080/api/product-category";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -29,9 +29,7 @@ export class ProductService {
     // url para a pesquisa por meio da categoria
     const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`
 
-    return this.httpClient.get<GetResponseProducts>(searchUrl).pipe(
-      map(response => response._embedded.products)
-    );
+    return this.getProducts(searchUrl);
     
   }
 
